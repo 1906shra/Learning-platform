@@ -16,11 +16,12 @@ const Card = ({ title, description, image, rating, price, onViewDetails }) => {
       </div>
 
       <button
-        onClick={onViewDetails}
-        className="mt-6 bg-[#612EED] text-white px-4 py-2 rounded-lg hover:bg-[#613EEE] transition"
-      >
-        View Details
-      </button>
+  onClick={onViewDetails}
+  className="mt-6 bg-[#612EED] text-white px-4 py-2 rounded-[7px] hover:bg-[#613EEE] transition"
+>
+  View Details
+</button>
+
     </div>
   );
 };
