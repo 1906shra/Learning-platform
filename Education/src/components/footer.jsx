@@ -1,5 +1,6 @@
 import { HiOutlineMail } from 'react-icons/hi';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -31,8 +32,11 @@ const Footer = () => {
 
         {/* Right Side */}
         <div className="mt-8 md:mt-0 md:ml-24 space-y-2 text-sm md:text-lg text-right">
-          <h3 className="text-base md:text-xl font-semibold mb-2">Contact Details</h3>
-          <p>+91 6303251526</p>
+           <h3 className="text-base md:text-xl font-semibold mb-2">Contact Details</h3>
+    <div className="flex items-center gap-2">
+      <Phone className="w-5 h-5 text-gray-white" />
+      <p>+91 6303251526</p>
+    </div>
           <p className="flex items-center justify-end gap-2">
             <HiOutlineMail className="text-lg" /> example@gmail.com
           </p>

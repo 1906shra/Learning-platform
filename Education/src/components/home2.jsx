@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import { motion } from 'framer-motion';
 import c1 from '../assets/c1.png';
 import c2 from '../assets/c2.png';
 import c3 from '../assets/c3.png';
@@ -97,10 +98,14 @@ const internships = [
   },
 ];
 
+const cardAnimation = {
+  hidden: { opacity: 0, scale: 0.95, y: 20 },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4 } },
+};
+
 const CoursesAndInternships = () => {
   const handleViewDetails = (type, title) => {
     alert(`Viewing details for ${type}: ${title}`);
-    // Navigation or modal logic can be added here
   };
 
   return (
@@ -108,22 +113,30 @@ const CoursesAndInternships = () => {
       <h1 className="text-3xl font-bold mb-6">Courses We Provide</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {courses.map((course, index) => (
-          <Card
+          <motion.div
             key={index}
-            {...course}
-            onViewDetails={() => handleViewDetails('Course', course.title)}
-          />
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={cardAnimation}
+          >
+            <Card {...course} onViewDetails={() => handleViewDetails('Course', course.title)} />
+          </motion.div>
         ))}
       </div>
 
       <h1 className="text-3xl font-bold mb-6">Internships We Provide</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {internships.map((internship, index) => (
-          <Card
+          <motion.div
             key={index}
-            {...internship}
-            onViewDetails={() => handleViewDetails('Internship', internship.title)}
-          />
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={cardAnimation}
+          >
+            <Card {...internship} onViewDetails={() => handleViewDetails('Internship', internship.title)} />
+          </motion.div>
         ))}
       </div>
     </div>
