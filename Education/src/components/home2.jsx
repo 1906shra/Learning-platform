@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from './card';
 import { motion } from 'framer-motion';
 import c1 from '../assets/c1.png';
 import c2 from '../assets/c2.png';
