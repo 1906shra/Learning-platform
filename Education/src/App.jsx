@@ -6,7 +6,7 @@ import Footer from './components/footer';
 import About from './pages/about';
 import SignupPage from './pages/signup';
 import LoginPage from './pages/login';
-import Courses from './pages/courses';
+import Courses from './pages/Courses';
 import MyComponent from './pages/CourseDetail1';
 import Header1 from './components/header2';
 import Internships from './pages/internship';
