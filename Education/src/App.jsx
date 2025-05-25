@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/header';
  // Import your alternate header
-import Home from './pages/home.jsx';
+import Home from './pages/home';
 import Footer from './components/footer';
 import About from './pages/about';
 import SignupPage from './pages/signup';
