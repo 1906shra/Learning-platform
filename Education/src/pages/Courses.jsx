@@ -4,7 +4,7 @@ import c3 from '../assets/c3.png';
 import c4 from '../assets/c4.png';
 import c5 from '../assets/c5.png';
 import c6 from '../assets/c6.png';
-import Card from '../components/Card';
+import Card from '../components/card';
 
 const courses = [
   {
